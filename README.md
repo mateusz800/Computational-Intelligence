@@ -1,0 +1,1 @@
+Exercises from the online book Getting Started (https://www.scheme.com/tspl4/start.html#./start:h0).
