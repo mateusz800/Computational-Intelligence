@@ -1,5 +1,7 @@
 #lang racket
 
+; get last element of the list
+
 (define last
   (lambda (ls)
     (if (eq? (cdr ls) '())
