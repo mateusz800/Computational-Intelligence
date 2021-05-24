@@ -1,0 +1,21 @@
+#lang racket
+
+;Binary number (list) to decimal
+
+(define last
+  (lambda (ls)
+    (if (eq? (cdr ls) '())
+        (car ls)
+        (last (cdr ls))
+        )))
+
+(define bin2dec
+    (lambda (lst)
+     (let ([x 0])
+      (cond
+        [(null? lst) 0]
+        [else (+ (last lst) (* 2 (bin2dec (reverse (cdr (reverse lst))))))]
+        ))))
+         
+
+(bin2dec (list 0 0 1 1 0 1))

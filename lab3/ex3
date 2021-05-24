@@ -1,0 +1,17 @@
+#lang racket
+
+;Duplicate elements in list
+;(duplicate '(a b c)) => (a a b b c c)
+
+(define copy
+  (lambda (value)
+    (cons value value)))
+
+(define duplicate
+  (lambda (lst)
+    (cond
+      [(null? lst) '()]
+      [else (cons (car lst) (cons (car lst) (duplicate (cdr lst))))])))
+      
+
+(duplicate '(a b c))

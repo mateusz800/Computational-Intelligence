@@ -1,0 +1,15 @@
+#lang racket
+
+;largest number in the list
+;(maximal (list 0 4 -3 2 8 -1)) => 8
+
+(define maximal
+  (lambda (lst)
+    (if (null?  (cdr lst))
+        (car lst)
+        (if (> (car (cdr lst)) (car lst))
+            (maximal (cdr lst))
+            (maximal (cons (car lst) (cdr (cdr lst))))))))
+
+
+(maximal (list 0 4 -3 2 8 -1))
