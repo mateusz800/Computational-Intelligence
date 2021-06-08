@@ -1,6 +1,0 @@
-#lang racket
-;Write a program approximating of the square root calculation for any positive real number xwith a given precision M.
-;When implementing the algorithm, do not use the syntax form set!
-;a)set the initial value of the square root  ri=1b)
-;if the approximation is reached, i.e. |ri2-x|<M then finish the calculation and returnthe obtained square root,
-;otherwise go to step c)c)correct the square root approximationri+1=ri+xri2and go back to step b)
